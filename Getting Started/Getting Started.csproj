@@ -34,6 +34,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,9 +45,255 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\FlightAwareServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.AircraftTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.AircraftTypeStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.AirlineFlightInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.AirlineFlightInfoStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.AirlineFlightSchedulesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.AirlineInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.AirlineInfoStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.AirlineInsightResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.AirportInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.AirportInfoStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.AllAirlinesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.AllAirportsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.ArrayOfAirlineFlightScheduleStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.ArrayOfAirlineInsightStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.ArrayOfFlightRouteStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.ArrayOfMetarStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.ArrayOfRoutesBetweenAirportsExStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.ArrayOfTrackExStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.ArrivalStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.ArrivedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.BlockIdentCheckResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.CountAirlineOperationsStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.CountAirportOperationsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.CountAirportOperationsStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.CountAllEnrouteAirlineOperationsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.DecodeFlightRouteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.DecodeRouteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.DeleteAlertResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.DepartedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.DepartureStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.EnrouteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.EnrouteStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.FleetArrivedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.FleetScheduledResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.FlightAlertListing.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.FlightExStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.FlightInfoExResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.FlightInfoExStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.FlightInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.FlightInfoStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.GetAlertsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.GetFlightIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.GetHistoricalTrackResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.GetLastTrackResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.InboundFlightInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.InFlightAircraftStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.InFlightInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.InFlightStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.LatLongsToDistanceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.LatLongsToHeadingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.MapFlightExResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.MapFlightResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.MetarExResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.MetarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.NTafResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.RegisterAlertEndpointResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.RoutesBetweenAirportsExResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.RoutesBetweenAirportsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.RoutesBetweenAirportsStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.ScheduledResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.ScheduledStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.SearchBirdseyeInFlightResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.SearchBirdseyePositionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.SearchCountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.SearchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.SetAlertResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.SetMaximumResultSizeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.TafResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.TafStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.TailOwnerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.TailOwnerStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.TrackStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.ZipcodeInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\Getting_Started.FlightAwareServiceReference.ZipcodeInfoStruct.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\FlightAwareServiceReference\wsdl.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\FlightAwareServiceReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FlightAwareServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FlightAwareServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FlightAwareServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
